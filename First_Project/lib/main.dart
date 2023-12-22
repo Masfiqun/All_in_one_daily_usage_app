@@ -114,7 +114,7 @@ class HomeActivity extends StatelessWidget{
 
         elevation: 10,
         child: Icon(Icons.add),
-        onPressed: () {MySnackBar("Reset new Alarm", context);},
+        onPressed: () {MySnackBar("set new Alarm", context);},
         backgroundColor: Colors.black,
         foregroundColor: Colors.tealAccent,
        
