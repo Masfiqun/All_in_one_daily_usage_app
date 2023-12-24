@@ -1,4 +1,3 @@
-import 'package:first_project/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +33,17 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
+    ButtonStyle buttonStyle3=OutlinedButton.styleFrom(
+    
+      minimumSize: Size(double.infinity, 40),
+      backgroundColor: Colors.black,
+      foregroundColor: Colors.tealAccent,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10))
+    )
+
+  );
+
     return Scaffold(
         appBar: AppBar(
           title: Text('Fill up your information...'),
@@ -44,7 +54,12 @@ class HomeActivity extends StatelessWidget{
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          TextField(decoration: InputDecoration(),)
+          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'First name'))),
+          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'Last name'))),
+          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'E-mail Address'))),
+        
+        Padding(padding: EdgeInsets.all(10),child: ElevatedButton(onPressed: () {;},child: Text('Submit'), style: buttonStyle3,), ),
+        
         ],
       ),
   );

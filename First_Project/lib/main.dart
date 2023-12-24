@@ -35,9 +35,15 @@ class MyApp extends StatelessWidget{
 class HomeActivity extends StatelessWidget{
     HomeActivity({super.key});
 
-  // var MyItems=[
-  //   {"img":"https://w0.peakpx.com/wallpaper/979/89/HD-wallpaper-purple-smile-design-eye-smily-profile-pic-face.jpg","title":"nothing"}
-  // ];
+  var MyItems=[
+    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"jail"},
+    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"mail"},
+    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"pail"},
+    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"lail"},
+    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"kail"},
+    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"rail"},
+    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"qail"},
+  ];
 
   ButtonStyle buttonStyle=ElevatedButton.styleFrom(
     padding: EdgeInsets.all(10),
@@ -48,6 +54,11 @@ class HomeActivity extends StatelessWidget{
     )
   );
   
+
+mySnackBar(context,msg){
+    return ScaffoldMessenger.of(context as BuildContext).showSnackBar(SnackBar(content: Text(msg)));
+  }
+
   
 
   // ignore: non_constant_identifier_names
@@ -185,7 +196,8 @@ class HomeActivity extends StatelessWidget{
               
               DrawerHeader( 
                 
-              child: Text("To-do List")
+              child: Text("To-do List"),
+              
                
               
               ),
@@ -259,20 +271,34 @@ class HomeActivity extends StatelessWidget{
 
 
 
-//form
-  Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'First name'))),
-          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'Last name'))),
-          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'E-mail Address'))),
+// //form
+//   Column(
+//         mainAxisAlignment: MainAxisAlignment.start,
+//         children: [
+//           Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'First name'))),
+//           Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'Last name'))),
+//           Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'E-mail Address'))),
         
-        Padding(padding: EdgeInsets.all(10),child: ElevatedButton(onPressed: () {;},child: Text('Submit'), style: buttonStyle3,), ),
+//         Padding(padding: EdgeInsets.all(10),child: ElevatedButton(onPressed: () {;},child: Text('Submit'), style: buttonStyle3,), ),
         
-        
-        
-        ],
-      ),
+//         ],
+//       ),
+
+
+
+
+ListView.builder(itemBuilder: (context,index){
+              return GestureDetector(
+                  onTap: () {mySnackBar(context, MyItems[index]['title']);},
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    width: double.infinity,
+                    height: 220,
+                      child: Image.network(MyItems[index]['img']!, fit: BoxFit.fill,),
+                  ),
+              );
+            },
+            itemCount: MyItems.length,)
     );
     
   }
