@@ -84,7 +84,7 @@ class HomeActivity extends StatelessWidget{
      
 
 
-    //  ButtonStyle buttonStyle2=OutlinedButton.styleFrom(
+  //    ButtonStyle buttonStyle2=OutlinedButton.styleFrom(
     
   //   backgroundColor: Colors.white,
   //   foregroundColor: Colors.tealAccent,
@@ -92,6 +92,19 @@ class HomeActivity extends StatelessWidget{
       
   //   )
   // );
+
+
+  
+     ButtonStyle buttonStyle3=OutlinedButton.styleFrom(
+    
+      minimumSize: Size(double.infinity, 40),
+      backgroundColor: Colors.black,
+      foregroundColor: Colors.tealAccent,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10))
+    )
+
+  );
     
     return Scaffold(
 
@@ -250,7 +263,14 @@ class HomeActivity extends StatelessWidget{
   Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          TextField(decoration: InputDecoration(),)
+          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'First name'))),
+          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'Last name'))),
+          Padding(padding: EdgeInsets.all(10),child:TextField(decoration: InputDecoration(border:OutlineInputBorder(),labelText: 'E-mail Address'))),
+        
+        Padding(padding: EdgeInsets.all(10),child: ElevatedButton(onPressed: () {;},child: Text('Submit'), style: buttonStyle3,), ),
+        
+        
+        
         ],
       ),
     );
