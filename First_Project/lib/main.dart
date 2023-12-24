@@ -59,7 +59,9 @@ class HomeActivity extends StatelessWidget{
   }
 
   MyAlertDialog(context){
-    return showDialog(context: context, builder: (BuildContext context){
+    return showDialog(
+      context: context,
+       builder: (BuildContext context){
       return Expanded(
         child: AlertDialog(
           title: Text('Alert'),
@@ -67,7 +69,8 @@ class HomeActivity extends StatelessWidget{
           actions: [
             ElevatedButton(onPressed: (){;}, child: Text('Yes'), style: buttonStyle,),
             ElevatedButton(onPressed: (){;}, child: Text('No'), style: buttonStyle,),
-          ]),
+          ]
+          ),
           );
     });
   }
@@ -230,15 +233,26 @@ class HomeActivity extends StatelessWidget{
     //   ],
     //   )
 
-    Center(
-      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      child: 
-        // TextButton(onPressed: (){MySnackBar("jongli", context);}, child: Text('Button')),
-        ElevatedButton(onPressed: (){MyAlertDialog(context);}, child: Text('Create Account'),style: buttonStyle),
-        // OutlinedButton(onPressed: (){MySnackBar('I am outlined', context);}, child: Text('Outlined'), style:buttonStyle2)
+    // Center(
+    //   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //   child: 
+    //     // TextButton(onPressed: (){MySnackBar("jongli", context);}, child: Text('Button')),
+    //     ElevatedButton(onPressed: (){MyAlertDialog(context);}, child: Text('Create Account'),style: buttonStyle),
+    //     // OutlinedButton(onPressed: (){MySnackBar('I am outlined', context);}, child: Text('Outlined'), style:buttonStyle2)
       
-    )
+    // )
     
+
+
+
+
+//form
+  Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          TextField(decoration: InputDecoration(),)
+        ],
+      ),
     );
     
   }
