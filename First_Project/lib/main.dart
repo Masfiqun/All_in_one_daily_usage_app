@@ -287,18 +287,25 @@ mySnackBar(context,msg){
 
 
 
-ListView.builder(itemBuilder: (context,index){
+GridView.builder(
+  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+    crossAxisCount: 2,
+    crossAxisSpacing: 0,
+    childAspectRatio: 1.2,
+    ),
+      itemCount: MyItems.length,
+        itemBuilder: (context,index){
               return GestureDetector(
                   onTap: () {mySnackBar(context, MyItems[index]['title']);},
                   child: Container(
-                    margin: EdgeInsets.all(10),
+                    margin: EdgeInsets.all(5),
                     width: double.infinity,
                     height: 220,
                       child: Image.network(MyItems[index]['img']!, fit: BoxFit.fill,),
                   ),
               );
             },
-            itemCount: MyItems.length,)
+            )
     );
     
   }
