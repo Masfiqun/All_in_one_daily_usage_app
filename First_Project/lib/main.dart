@@ -179,7 +179,7 @@ mySnackBar(context,msg){
               
               
               ListTile(leading: Icon(Icons.person),title: Text("Profile")),
-              ListTile(leading: Icon(Icons.safety_check),title: Text("BMI Counter")),
+              ListTile(leading: Icon(Icons.safety_check),title: Text("bmi Counter")),
               ListTile(leading: Icon(Icons.add_task),title: Text("Step Counter")),
               ListTile(leading: Icon(Icons.settings),title: Text("Setting")),
             ],
