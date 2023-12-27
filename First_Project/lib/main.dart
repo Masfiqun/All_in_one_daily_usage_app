@@ -302,8 +302,11 @@ GridView.builder(
                     width: double.infinity,
                     height: 220,
                       child: Image.network(MyItems[index]['img']!, fit: BoxFit.fill,),
+                                        
                   ),
+                  
               );
+              OutlinedButton(onPressed: (){MyAlertDialog(context);}, child: Text('Create Account'),style: buttonStyle3);
             },
             )
     );
