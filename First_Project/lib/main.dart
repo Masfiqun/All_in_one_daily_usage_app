@@ -106,18 +106,20 @@ mySnackBar(context,msg){
 
 
   
-     ButtonStyle buttonStyle3=OutlinedButton.styleFrom(
+  //    ButtonStyle buttonStyle3=OutlinedButton.styleFrom(
     
-      minimumSize: Size(double.infinity, 40),
-      backgroundColor: Colors.black,
-      foregroundColor: Colors.tealAccent,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(10))
-    )
+  //     minimumSize: Size(double.infinity, 40),
+  //     backgroundColor: Colors.black,
+  //     foregroundColor: Colors.tealAccent,
+  //     shape: RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.all(Radius.circular(10))
+  //   )
 
-  );
+  // );
     
-    return Scaffold(
+    return DefaultTabController(
+      length: 8,
+      child: Scaffold(
 
       appBar: AppBar(
         title: const Text("Mafiqun Ahmed"),
@@ -128,12 +130,15 @@ mySnackBar(context,msg){
         backgroundColor: Colors.black,
         foregroundColor: Colors.tealAccent,
         
-        // actions: [
-        
-        // IconButton(onPressed: (){MySnackBar("Alarm has been set", context);}, icon: Icon(Icons.access_alarm_outlined)),
-        // IconButton(onPressed: (){}, icon: Icon(Icons.view_sidebar))
-        
-        // ],
+        bottom: TabBar(
+          isScrollable: true,
+          tabs: [
+            Tab(icon: Icon(Icons.home), text: 'Home',),
+            Tab(icon: Icon(Icons.search), text: 'Search',),
+            Tab(icon: Icon(Icons.contact_mail), text: 'Contact',),
+            Tab(icon: Icon(Icons.notifications), text: 'Notification'),
+          ]
+          ),
         
         ),
       
@@ -225,7 +230,16 @@ mySnackBar(context,msg){
       //   },
       //   )
 
-      body: 
+      body:
+       TabBarView(
+              children: [
+                Text("1"),
+                Text("2"),
+                Text("3"),
+                Text("4"),
+                
+              ],
+              ),
     // Container(
     //     height: 250,
     //     width: 250,
@@ -287,29 +301,31 @@ mySnackBar(context,msg){
 
 
 
-GridView.builder(
-  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: 2,
-    crossAxisSpacing: 0,
-    childAspectRatio: 1.2,
-    ),
-      itemCount: MyItems.length,
-        itemBuilder: (context,index){
-              return GestureDetector(
-                  onTap: () {mySnackBar(context, MyItems[index]['title']);},
-                  child: Container(
-                    margin: EdgeInsets.all(5),
-                    width: double.infinity,
-                    height: 220,
-                      child: Image.network(MyItems[index]['img']!, fit: BoxFit.fill,),
+// GridView.builder(
+//   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//     crossAxisCount: 2,
+//     crossAxisSpacing: 0,
+//     childAspectRatio: 1.2,
+//     ),
+//       itemCount: MyItems.length,
+//         itemBuilder: (context,index){
+//               return GestureDetector(
+//                   onTap: () {mySnackBar(context, MyItems[index]['title']);},
+//                   child: Container(
+//                     margin: EdgeInsets.all(5),
+//                     width: double.infinity,
+//                     height: 220,
+//                       child: Image.network(MyItems[index]['img']!, fit: BoxFit.fill,),
                                         
-                  ),
+//                   ),
                   
-              );
-              OutlinedButton(onPressed: (){MyAlertDialog(context);}, child: Text('Create Account'),style: buttonStyle3);
-            },
-            )
-    );
+//               );
+//               //OutlinedButton(onPressed: (){MyAlertDialog(context);}, child: Text('Create Account'),style: buttonStyle3);
+//             },
+//             )
+    )
+      
+      );
     
   }
 

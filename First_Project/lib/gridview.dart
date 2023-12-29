@@ -49,16 +49,16 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    ButtonStyle buttonStyle3=OutlinedButton.styleFrom(
+  //   ButtonStyle buttonStyle3=OutlinedButton.styleFrom(
     
-      minimumSize: Size(double.infinity, 40),
-      backgroundColor: Colors.black,
-      foregroundColor: Colors.tealAccent,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(10))
-    )
+  //     minimumSize: Size(double.infinity, 40),
+  //     backgroundColor: Colors.black,
+  //     foregroundColor: Colors.tealAccent,
+  //     shape: RoundedRectangleBorder(
+  //       borderRadius: BorderRadius.all(Radius.circular(10))
+  //   )
 
-  );
+  // );
 
     return Scaffold(
         appBar: AppBar(
