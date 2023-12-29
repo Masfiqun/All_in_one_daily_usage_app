@@ -1,5 +1,13 @@
 
 
+import 'package:first_project/Fragment/AlarmFragment.dart';
+import 'package:first_project/Fragment/ContactFragment.dart';
+import 'package:first_project/Fragment/HomeFragment.dart';
+import 'package:first_project/Fragment/NotificationFragment.dart';
+import 'package:first_project/Fragment/ProfileFragment.dart';
+import 'package:first_project/Fragment/SearchFragment.dart';
+import 'package:first_project/Fragment/SettingsFragment.dart';
+import 'package:first_project/Fragment/VideoFragment.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -35,15 +43,7 @@ class MyApp extends StatelessWidget{
 class HomeActivity extends StatelessWidget{
     HomeActivity({super.key});
 
-  var MyItems=[
-    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"jail"},
-    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"mail"},
-    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"pail"},
-    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"lail"},
-    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"kail"},
-    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"rail"},
-    {"img":"https://wallpapercave.com/wp/wp2550666.jpg","title":"qail"},
-  ];
+  
 
   ButtonStyle buttonStyle=ElevatedButton.styleFrom(
     padding: EdgeInsets.all(10),
@@ -131,12 +131,17 @@ mySnackBar(context,msg){
         foregroundColor: Colors.tealAccent,
         
         bottom: TabBar(
+          labelColor: (Colors.tealAccent),
           isScrollable: true,
           tabs: [
             Tab(icon: Icon(Icons.home), text: 'Home',),
+            Tab(icon: Icon(Icons.alarm), text: 'Alarm',),
             Tab(icon: Icon(Icons.search), text: 'Search',),
             Tab(icon: Icon(Icons.contact_mail), text: 'Contact',),
             Tab(icon: Icon(Icons.notifications), text: 'Notification'),
+            Tab(icon: Icon(Icons.person), text: 'Profile'),
+            Tab(icon: Icon(Icons.settings), text: 'Settings'),
+            Tab(icon: Icon(Icons.video_call), text: 'video'),
           ]
           ),
         
@@ -153,6 +158,9 @@ mySnackBar(context,msg){
      ),
       
       bottomNavigationBar: BottomNavigationBar(
+        fixedColor: Colors.tealAccent,
+        backgroundColor: Colors.black,
+
         currentIndex: 2,
         items: const [
                 BottomNavigationBarItem(icon: Icon(Icons.alarm_add) ,label: "Alarm"),
@@ -178,7 +186,7 @@ mySnackBar(context,msg){
                 decoration: BoxDecoration(color: Colors.black),
                 accountName: Text("Masfiqun",style: TextStyle(color: Colors.tealAccent),),
                 accountEmail: Text("masfiqunahmed2@gmail.com",style: TextStyle(color: Colors.tealAccent)),
-                currentAccountPicture: Image.network("https://scontent.fdac27-2.fna.fbcdn.net/v/t39.30808-6/391620692_3688633168126159_4574215476188254108_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeHjEIEeqDtlL5BpLcKRwDkVtnja3Et5Vdi2eNrcS3lV2OVEvodb3jBVZzlldfR8mzhnV8nEyegCuqNt0PBnI8RG&_nc_ohc=X1VnCX6370oAX-f-zE2&_nc_ht=scontent.fdac27-2.fna&oh=00_AfBH6EBbA95YALuwDoA8x-dPfaUNKI_wselrFklNdKh7mw&oe=65888323"),
+                currentAccountPicture: Image.network("https://wallpapercave.com/wp/wp2550666.jpg"),
               ),
               ),
               
@@ -233,10 +241,15 @@ mySnackBar(context,msg){
       body:
        TabBarView(
               children: [
-                Text("1"),
-                Text("2"),
-                Text("3"),
-                Text("4"),
+                HomeFragment(),
+                AlarmFragment(),
+                SearchFragment(),
+                ContactFragment(),
+                NotificationFragment(),
+                ProfileFragment(),
+                SettingsFragment(),
+                VideoFragment(),
+
                 
               ],
               ),
@@ -301,28 +314,7 @@ mySnackBar(context,msg){
 
 
 
-// GridView.builder(
-//   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-//     crossAxisCount: 2,
-//     crossAxisSpacing: 0,
-//     childAspectRatio: 1.2,
-//     ),
-//       itemCount: MyItems.length,
-//         itemBuilder: (context,index){
-//               return GestureDetector(
-//                   onTap: () {mySnackBar(context, MyItems[index]['title']);},
-//                   child: Container(
-//                     margin: EdgeInsets.all(5),
-//                     width: double.infinity,
-//                     height: 220,
-//                       child: Image.network(MyItems[index]['img']!, fit: BoxFit.fill,),
-                                        
-//                   ),
-                  
-//               );
-//               //OutlinedButton(onPressed: (){MyAlertDialog(context);}, child: Text('Create Account'),style: buttonStyle3);
-//             },
-//             )
+
     )
       
       );
