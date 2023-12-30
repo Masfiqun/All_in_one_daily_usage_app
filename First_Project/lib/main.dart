@@ -11,11 +11,7 @@ import 'package:first_project/Fragment/VideoFragment.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  
     runApp(const MyApp());
-  
-
-
 }
 
 
@@ -40,11 +36,14 @@ class MyApp extends StatelessWidget{
 
 
 // ignore: must_be_immutable
-class HomeActivity extends StatelessWidget{
+class HomeActivity extends StatefulWidget{
     HomeActivity({super.key});
 
-  
+  @override
+  State<HomeActivity> createState() => _HomeActivityState();
+}
 
+class _HomeActivityState extends State<HomeActivity> {
   ButtonStyle buttonStyle=ElevatedButton.styleFrom(
     padding: EdgeInsets.all(10),
     backgroundColor: Colors.black,
@@ -53,13 +52,10 @@ class HomeActivity extends StatelessWidget{
       borderRadius: BorderRadius.all(Radius.circular(10))
     )
   );
-  
 
 mySnackBar(context,msg){
     return ScaffoldMessenger.of(context as BuildContext).showSnackBar(SnackBar(content: Text(msg)));
   }
-
-  
 
   // ignore: non_constant_identifier_names
   MySnackBar(message,context){
@@ -86,8 +82,7 @@ mySnackBar(context,msg){
     });
   }
 
-
-
+  int myIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -159,8 +154,14 @@ mySnackBar(context,msg){
       
       bottomNavigationBar: BottomNavigationBar(
 
-        currentIndex: 1,
-        
+        onTap: (index) {
+          setState(() {
+             myIndex = index;
+          });
+         
+        },
+
+        currentIndex: myIndex,
         selectedItemColor: Colors.tealAccent,
         backgroundColor: Colors.black,
 
@@ -323,6 +324,4 @@ mySnackBar(context,msg){
       );
     
   }
-
-
 }
