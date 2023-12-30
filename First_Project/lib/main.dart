@@ -158,10 +158,13 @@ mySnackBar(context,msg){
      ),
       
       bottomNavigationBar: BottomNavigationBar(
-        fixedColor: Colors.tealAccent,
+
+        currentIndex: 1,
+        
+        selectedItemColor: Colors.tealAccent,
         backgroundColor: Colors.black,
 
-        currentIndex: 2,
+       
         items: const [
                 BottomNavigationBarItem(icon: Icon(Icons.alarm_add) ,label: "Alarm"),
                 // BottomNavigationBarItem(icon: Icon(Icons.lock_clock) ,label: "Clock"),
