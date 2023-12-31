@@ -32,6 +32,18 @@ class HomeActivity extends StatefulWidget{
 }
 
 class _HomeActivityState extends State<HomeActivity> {
+
+
+ButtonStyle buttonStyle=ElevatedButton.styleFrom(
+    padding: EdgeInsets.all(10),
+    backgroundColor: Colors.black,
+    foregroundColor: Colors.tealAccent,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(10))
+    )
+  );
+
+
   
  mySnackBar(context,msg){
     return ScaffoldMessenger.of(context as BuildContext).showSnackBar(SnackBar(content: Text(msg)));
@@ -41,6 +53,24 @@ class _HomeActivityState extends State<HomeActivity> {
     return ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(message))
       );
+  }
+
+
+  MyAlertDialog(context){
+    return showDialog(
+      context: context,
+       builder: (BuildContext context){
+      return Expanded(
+        child: AlertDialog(
+          title: Text('New Alarm'),
+          content: Text('Do you want to creat a new alarm?'),
+          actions: [
+            ElevatedButton(onPressed: (){;}, child: Text('Yes'), style: buttonStyle,),
+            ElevatedButton(onPressed: (){;}, child: Text('No'), style: buttonStyle,),
+          ]
+          ),
+          );
+    });
   }
 
   int myIndex = 0;
@@ -85,12 +115,33 @@ class _HomeActivityState extends State<HomeActivity> {
         
         elevation: 10,
         child: Icon(Icons.add),
-        onPressed: (){MySnackBar("Set new alarm", context);},
+        onPressed: (){MyAlertDialog(context);},
         backgroundColor: Colors.black,
         foregroundColor: Colors.tealAccent,
-
         ),
 
+
+      drawer: Drawer(
+        backgroundColor: Colors.black,
+        child: ListView(
+          children: [
+            DrawerHeader(
+              padding: EdgeInsets.all(0),
+              child: UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.black),
+                accountName: Text("Masfiqun", style: TextStyle(color: Colors.white)),
+                accountEmail: Text("masfiqunahmed2@gmail.com", style: TextStyle(color: Colors.white),),
+                currentAccountPicture: Image.network("https://wallpapercave.com/wp/wp2550666.jpg"),
+                  ),
+                ),
+
+              ListTile(leading: Icon(Icons.person),title: Text('Profile', style: TextStyle(color: Colors.white)),),
+              ListTile(leading: Icon(Icons.safety_check),title: Text('BMI Counter', style: TextStyle(color: Colors.white)),),
+              ListTile(leading: Icon(Icons.add_task),title: Text('Step Counter', style: TextStyle(color: Colors.white)),),
+              ListTile(leading: Icon(Icons.settings),title: Text('Settings', style: TextStyle(color: Colors.white)),),
+          ],
+        ),
+      ),
       
     );
     
