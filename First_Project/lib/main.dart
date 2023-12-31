@@ -74,11 +74,22 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
   }
 
   int myIndex = 0;
+  List<Widget> widgetList = const[
+    Text('Alarm', style: TextStyle(fontSize: 40)),
+    Text('Timer', style: TextStyle(fontSize: 40)),
+    Text('Stop Watch', style: TextStyle(fontSize: 40)),
+  ];
  
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
+
+
+      body: IndexedStack(
+        children: widgetList,
+        index: myIndex,
+      ),
 
 
       appBar: AppBar(
@@ -141,6 +152,23 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
               ListTile(leading: Icon(Icons.settings),title: Text('Settings', style: TextStyle(color: Colors.white)),),
           ],
         ),
+      ),
+
+
+      endDrawer: Drawer(
+        
+        backgroundColor: Colors.black,
+        // foregroundColor: Colors.tealAccent,
+        child: ListView(          
+            children: const [
+              
+              DrawerHeader( 
+                
+              child: Text("To-do List", style: TextStyle(color: Colors.white),),
+
+              ),
+            ],
+         ),
       ),
       
     );
