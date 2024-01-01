@@ -1,3 +1,4 @@
+import 'package:first_project/Clock/clock.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -74,8 +75,9 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
   }
 
   int myIndex = 0;
-  List<Widget> widgetList = const[
+  List<Widget> widgetList = [
     Text('Alarm', style: TextStyle(fontSize: 40)),
+    Clock(),
     Text('Timer', style: TextStyle(fontSize: 40)),
     Text('Stop Watch', style: TextStyle(fontSize: 40)),
   ];
@@ -85,22 +87,23 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
 
     return Scaffold(
 
-
-      body: IndexedStack(
-        children: widgetList,
-        index: myIndex,
-      ),
-
-
       appBar: AppBar(
-        title: const Text('All_in_one_daily_usage_app'),
-        titleSpacing: 0,
-        centerTitle: true,
-        toolbarHeight: 60,
-        elevation: 100,
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.tealAccent,
-      ),
+                title: const Text('All_in_one_daily_usage_app'),
+                titleSpacing: 0,
+                centerTitle: true,
+                toolbarHeight: 60,
+                elevation: 100,
+                backgroundColor: Colors.black,
+                foregroundColor: Colors.tealAccent,
+              ),
+
+
+      body:  
+          IndexedStack(
+            
+            children: widgetList,
+            index: myIndex,
+          ),
 
 
       bottomNavigationBar: BottomNavigationBar(
@@ -112,12 +115,14 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
 
         currentIndex: myIndex,
         selectedItemColor: Colors.tealAccent,
-        backgroundColor: Colors.black12,
+        unselectedItemColor: Colors.black,
+        
 
-        items:const [
-                      BottomNavigationBarItem(icon: Icon(Icons.alarm_add), label: 'Alarm'),
-                      BottomNavigationBarItem(icon: Icon(Icons.timer), label: 'Timer'),
-                      BottomNavigationBarItem(icon: Icon(Icons.lock_clock), label: 'Stop Watch'),
+        items: [
+                BottomNavigationBarItem(icon: Icon(Icons.alarm), label: 'Alarm'),
+                BottomNavigationBarItem(icon: Icon(Icons.watch_later_outlined), label: 'Clock'),
+                BottomNavigationBarItem(icon: Icon(Icons.timelapse_sharp), label: 'Timer'),
+                BottomNavigationBarItem(icon: Icon(Icons.timer), label: 'Stop Watch'),
         ]
       ),
 
