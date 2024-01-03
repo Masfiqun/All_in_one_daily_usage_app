@@ -92,7 +92,7 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
                 titleSpacing: 0,
                 centerTitle: true,
                 toolbarHeight: 60,
-                elevation: 100,
+                elevation: 10,
                 backgroundColor: Colors.black,
                 foregroundColor: Colors.tealAccent,
               ),
@@ -100,7 +100,6 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
 
       body:  
           IndexedStack(
-            
             children: widgetList,
             index: myIndex,
           ),
