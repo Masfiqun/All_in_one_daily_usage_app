@@ -47,7 +47,6 @@ class _ClockState extends State<Clock>{
                              Text("$hours:$minutes:$seconds", style: AppStyle.mainText,),
                           ],
                         ),
-                        
                         Center(
                           child: ClockWidget(TimeModel(
                             currentTime.hour,
