@@ -59,11 +59,11 @@ class _ClockState extends State<Clock>{
                     ],
                   );
                 }
-              ),              
-              ],
-            ),
+              ),
+            ],
           ),
-       ),
+        ),
+      ),
     );
   }
 }
