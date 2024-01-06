@@ -130,14 +130,7 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
       ),
 
 
-      floatingActionButton: FloatingActionButton(
-        
-        elevation: 10,
-        child: Icon(Icons.add),
-        onPressed: (){MyAlertDialog(context);},
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.tealAccent,
-        ),
+      
 
 
       drawer: Drawer(

@@ -35,13 +35,13 @@ class _StopwatchState extends State<Stopwatch> {
   Timer? timer;
   bool started = false;
   List<String> laps = [];
-  ScrollController _scrollController = ScrollController();
+  final ScrollController _scrollController = ScrollController();
 
 
   //Creating the stop timer function
 
   void stop(){
-    timer!.cancel();
+    timer?.cancel();
     setState(() {
       started = false;
     });
@@ -50,7 +50,7 @@ class _StopwatchState extends State<Stopwatch> {
   //creating the reset function
 
   void reset(){
-    timer!.cancel();
+    timer?.cancel();
     setState(() {
       seconds = 0;
       minutes = 0;
@@ -155,14 +155,14 @@ class _StopwatchState extends State<Stopwatch> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Lap ${index+1}', 
+                            'Lap ${reversedIndex+1}', 
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16.0,
                             ),
                           ),
                           Text(
-                            '${laps[index]}', 
+                            '${laps[reversedIndex]}', 
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16.0,
