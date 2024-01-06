@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:first_project/Clock/clock.dart';
-import 'package:first_project/EndDrawer_To_Do_List/to_do.dart';
+import 'package:first_project/Stop_Watch/stop_watch.dart';
+// import 'package:first_project/EndDrawer_To_Do_List/to_do.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget{
       theme: ThemeData(primarySwatch: Colors.green),
       darkTheme: ThemeData(primarySwatch: Colors.blue),
       color: Colors.blue,
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
        
     );
   }
@@ -80,7 +83,7 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
     Text('Alarm', style: TextStyle(fontSize: 40)),
     Clock(),
     Text('Timer', style: TextStyle(fontSize: 40)),
-    Text('Stop Watch', style: TextStyle(fontSize: 40)),
+    StopWatch(),
   ];
  
   @override
@@ -171,7 +174,6 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
                 
               child: Text("To-do List", style: TextStyle(color: Colors.white),),
               ),
-              ToDoAp()
             ],
          ),
       ),
