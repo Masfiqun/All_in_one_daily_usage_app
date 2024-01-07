@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, camel_case_types
 
 import 'package:flutter/material.dart';
 
@@ -17,14 +17,14 @@ class Alarm extends StatelessWidget {
   }
 }
 
-class alarmpart extends StatefulWidget {
-  const alarmpart({super.key});
+class alpart extends StatefulWidget {
+  const alpart({super.key});
 
   @override
-  State<alarmpart> createState() => _alarmpartState();
+  State<alpart> createState() => _alpartState();
 }
 
-class _alarmpartState extends State<alarmpart> {
+class _alpartState extends State<alpart> {
 
   ButtonStyle buttonStyle=ElevatedButton.styleFrom(
     padding: EdgeInsets.all(10),
