@@ -113,6 +113,8 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
         },
 
         currentIndex: myIndex,
+
+backgroundColor: Colors.blue,
         selectedItemColor: Colors.tealAccent,
         unselectedItemColor: Colors.black,
         
