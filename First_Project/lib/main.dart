@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:first_project/Alarm/alarm.dart';
 import 'package:first_project/Clock/clock.dart';
 import 'package:first_project/Stop_Watch/stop_watch.dart';
 // import 'package:first_project/Alarm/alarm.dart';
@@ -13,21 +14,15 @@ void main(){
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
 
- 
-
   @override
   Widget build(BuildContext context) {
     
      return  MaterialApp(
       home: HomeActivity(),
-      theme: ThemeData(primarySwatch: Colors.green),
-      darkTheme: ThemeData(primarySwatch: Colors.blue),
-      color: Colors.blue,
       debugShowCheckedModeBanner: false,
        
     );
   }
-
 }
 
 class HomeActivity extends StatefulWidget{
@@ -81,7 +76,7 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
 
   int myIndex = 0;
   List<Widget> widgetList = [
-    Text('Alarm', style: TextStyle(fontSize: 40)),
+    Alarm(),
     Clock(),
     Text('Timer', style: TextStyle(fontSize: 40)),
     StopWatch(),
