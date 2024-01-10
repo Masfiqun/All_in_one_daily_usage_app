@@ -25,7 +25,7 @@ class _ClockWidgetState extends State<ClockWidget>{
         shape: BoxShape.circle,
         //let's add some effects
         boxShadow: [
-          BoxShadow(color: AppStyle.primaryColor.withAlpha(80),blurRadius: 38.0),
+          BoxShadow(color: AppStyle.primaryColorDark.withAlpha(80),blurRadius: 38.0),
         ]
       ),
       height: 300,

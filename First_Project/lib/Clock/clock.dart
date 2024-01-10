@@ -18,6 +18,8 @@ class _ClockState extends State<Clock>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      backgroundColor: Colors.black,
       
       body: SafeArea(
         child: Padding(

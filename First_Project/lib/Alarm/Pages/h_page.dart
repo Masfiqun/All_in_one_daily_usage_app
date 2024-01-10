@@ -41,18 +41,20 @@ class _h_pageState extends State<h_page> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
 
+      backgroundColor: Colors.black,
       floatingActionButton: FloatingActionButton(
         
         elevation: 10,
         child: Icon(Icons.add),
         onPressed: (){MyAlertDialog(context);},
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.tealAccent,
+        backgroundColor: Colors.tealAccent,
+        foregroundColor: Colors.black,
         ),
 
-      body: Text('Alarm', style: TextStyle(fontSize: 40),),
+      body: Text('Alarm', style: TextStyle(fontSize: 40, color: Colors.amberAccent),),
     );
   }
 }

@@ -88,7 +88,7 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
     return Scaffold(
 
       appBar: AppBar(
-                title: const Text('All_in_one_daily_usage_app'),
+                title: const Text('Way_to_go', style: TextStyle(color: Colors.amberAccent),),
                 titleSpacing: 0,
                 centerTitle: true,
                 toolbarHeight: 60,

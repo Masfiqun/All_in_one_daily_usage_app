@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class AppStyle {
   static Color primaryColor = Colors.black; 
-  static Color primaryColorDark = Colors.tealAccent; 
+  static Color primaryColorDark = Colors.amberAccent; 
   
 
   static TextStyle mainText = const TextStyle(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 32.0,
     fontWeight: FontWeight.bold,
   );
@@ -20,7 +20,7 @@ class AppStyle {
 
 
   static TextStyle mainTextThin = const TextStyle(
-    color: Colors.black87,
+    color: Colors.white,
     fontSize: 32.0,
     fontWeight: FontWeight.w300,
   );
