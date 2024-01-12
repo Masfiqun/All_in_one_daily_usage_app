@@ -3,6 +3,7 @@
 import 'package:first_project/Alarm/alarm.dart';
 import 'package:first_project/Clock/clock.dart';
 import 'package:first_project/Stop_Watch/stop_watch.dart';
+import 'package:first_project/Timer/timer.dart';
 // import 'package:first_project/Alarm/alarm.dart';
 // import 'package:first_project/EndDrawer_To_Do_List/to_do.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +79,7 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
   List<Widget> widgetList = [
     Alarm(),
     Clock(),
-    Text('Timer', style: TextStyle(fontSize: 40)),
+    Timer(),
     StopWatch(),
   ];
  

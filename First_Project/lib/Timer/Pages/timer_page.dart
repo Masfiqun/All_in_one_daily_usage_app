@@ -10,6 +10,8 @@ class timer_page extends StatefulWidget {
 class _timer_pageState extends State<timer_page> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Text('Timer', style:TextStyle(fontSize: 40.0, color: Colors.amberAccent)),
+    );
   }
 }
