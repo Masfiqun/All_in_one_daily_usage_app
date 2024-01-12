@@ -105,26 +105,31 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
           ),
 
 
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: (index){
-          setState((){
-            myIndex  = index;
-          });
-        },
-
-        currentIndex: myIndex,
-
-backgroundColor: Colors.blue,
-        selectedItemColor: Colors.tealAccent,
-        unselectedItemColor: Colors.black,
+      bottomNavigationBar: Container(
+        height: 60,
+        width: double.infinity,
+        color: Colors.blue,
+        child: BottomNavigationBar(
+          onTap: (index){
+            setState((){
+              myIndex  = index;
+            });
+          },
         
-
-        items: [
-                BottomNavigationBarItem(icon: Icon(Icons.alarm), label: 'Alarm'),
-                BottomNavigationBarItem(icon: Icon(Icons.watch_later_outlined), label: 'Clock'),
-                BottomNavigationBarItem(icon: Icon(Icons.timelapse_sharp), label: 'Timer'),
-                BottomNavigationBarItem(icon: Icon(Icons.timer), label: 'Stop Watch'),
-        ]
+          currentIndex: myIndex,
+        
+        backgroundColor: Colors.blue,
+          selectedItemColor: Colors.tealAccent,
+          unselectedItemColor: Colors.black,
+          
+        
+          items: [
+                  BottomNavigationBarItem(icon: Icon(Icons.alarm), label: 'Alarm'),
+                  BottomNavigationBarItem(icon: Icon(Icons.watch_later_outlined), label: 'Clock'),
+                  BottomNavigationBarItem(icon: Icon(Icons.timelapse_sharp), label: 'Timer'),
+                  BottomNavigationBarItem(icon: Icon(Icons.timer), label: 'Stop Watch'),
+          ]
+        ),
       ),
 
       drawer: Drawer(
