@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:timer_builder/timer_builder.dart';
 
 
+
 class Clock extends StatefulWidget{
   const Clock({Key? key}) : super(key: key);
   
@@ -12,9 +13,13 @@ class Clock extends StatefulWidget{
   State<Clock> createState() => _ClockState();
 
 }
-
-
 class _ClockState extends State<Clock>{
+
+//adding the name of week
+var week = DateTime.now();
+// String dateFormat = dateFormat('dd-MM-yyy').format(week);
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +45,7 @@ class _ClockState extends State<Clock>{
                   return Column(
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [Text('Today', style: AppStyle.mainTextThin)],
                       ),
                       Center(
