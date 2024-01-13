@@ -87,7 +87,7 @@ class _HomeActivityState extends State<HomeActivity> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
         title: const Text(
           'Way_to_go',
@@ -147,10 +147,10 @@ class _HomeActivityState extends State<HomeActivity> {
           },
           
           tabs: [
-            MoltenTab(icon: Icon(Icons.alarm)),
-            MoltenTab(icon: Icon(Icons.watch_later_outlined)),
-            MoltenTab(icon: Icon(Icons.timelapse_sharp)),
-            MoltenTab(icon: Icon(Icons.timer)),
+            MoltenTab(icon: Icon(Icons.alarm),selectedColor: Colors.black, unselectedColor: Colors.amberAccent),
+            MoltenTab(icon: Icon(Icons.watch_later_outlined),selectedColor: Colors.black, unselectedColor: Colors.amberAccent),
+            MoltenTab(icon: Icon(Icons.timelapse_sharp),selectedColor: Colors.black, unselectedColor: Colors.amberAccent),
+            MoltenTab(icon: Icon(Icons.timer),selectedColor: Colors.black, unselectedColor: Colors.amberAccent),
           ],
       ),      
       
