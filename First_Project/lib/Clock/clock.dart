@@ -38,25 +38,24 @@ class _ClockState extends State<Clock>{
                   String hours = currentTime.hour < 10 ?"0${currentTime.hour}":"${currentTime.hour}";
 
                   return Column(
-                    
                     children: [
-                      
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-
-                            Text("Today", style: AppStyle.mainTextThin,),
-                             Text("$hours:$minutes:$seconds", style: AppStyle.mainText,),
-                          ],
-                        ),
-                        Center(
-                          child: ClockWidget(TimeModel(
-                            currentTime.hour,
-                            currentTime.minute, 
-                            currentTime.second
+                      Row(
+                        children: [Text('Today', style: AppStyle.mainTextThin)],
+                      ),
+                      Center(
+                        child: ClockWidget(TimeModel(
+                          currentTime.hour,
+                          currentTime.minute, 
+                          currentTime.second
                           )
                         )
                       ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                             Text("$hours:$minutes:$seconds", style: AppStyle.mainText,),
+                          ],
+                        ),
                     ],
                   );
                 }

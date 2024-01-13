@@ -93,7 +93,8 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
                 titleSpacing: 0,
                 centerTitle: true,
                 toolbarHeight: 60,
-                elevation: 10,
+                elevation: 5,
+                shadowColor: Colors.amberAccent,
                 backgroundColor: Colors.black,
                 foregroundColor: Colors.tealAccent,
               ),
@@ -120,7 +121,7 @@ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
           currentIndex: myIndex,
         
         backgroundColor: Colors.blue,
-          selectedItemColor: Colors.tealAccent,
+          selectedItemColor: Colors.teal,
           unselectedItemColor: Colors.black,
           
         

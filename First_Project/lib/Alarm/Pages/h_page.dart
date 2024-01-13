@@ -52,9 +52,13 @@ class _h_pageState extends State<h_page> {
         onPressed: (){MyAlertDialog(context);},
         backgroundColor: Colors.tealAccent,
         foregroundColor: Colors.black,
-        ),
+      ),
 
-      body: Text('Alarm', style: TextStyle(fontSize: 40, color: Colors.amberAccent),),
+      body: Center(
+        child: 
+          Text('Alarm', style: TextStyle(fontSize: 40, color: Colors.amberAccent),
+        )
+      ),
     );
   }
 }

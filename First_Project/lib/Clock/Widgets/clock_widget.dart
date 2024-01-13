@@ -25,7 +25,7 @@ class _ClockWidgetState extends State<ClockWidget>{
         shape: BoxShape.circle,
         //let's add some effects
         boxShadow: [
-          BoxShadow(color: AppStyle.primaryColorDark.withAlpha(80),blurRadius: 38.0),
+          BoxShadow(color: AppStyle.primaryColorDark.withAlpha(60),blurRadius: 30.0),
         ]
       ),
       height: 300,
@@ -112,7 +112,7 @@ class ClockPainter extends CustomPainter{
     canvas.drawLine(center, hours, hourBrush);
 
     //drawing the center dot
-    canvas.drawCircle(center, 16, centerDotBrush);
+    canvas.drawCircle(center, 12, centerDotBrush);
   }
 
   @override

@@ -6,7 +6,7 @@ class AppStyle {
   
 
   static TextStyle mainText = const TextStyle(
-    color: Colors.white,
+    color: Colors.amberAccent,
     fontSize: 32.0,
     fontWeight: FontWeight.bold,
   );
@@ -20,7 +20,7 @@ class AppStyle {
 
 
   static TextStyle mainTextThin = const TextStyle(
-    color: Colors.white,
+    color: Colors.amberAccent,
     fontSize: 32.0,
     fontWeight: FontWeight.w300,
   );
