@@ -37,7 +37,7 @@ class _timer_pageState extends State<timer_page> {
                     gradient: LinearGradient(
                       colors: [
                         Colors.black,
-                        Colors.amberAccent,
+                        Colors.amber,
                         Colors.tealAccent,
                         Colors.black,
                       ]
