@@ -26,38 +26,8 @@ class _timer_pageState extends State<timer_page> {
     
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
-        child:ClipRRect(
-          borderRadius: BorderRadius.circular(5),
-          child: Stack(
-            children: [
-              Positioned.fill(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.black,
-                        Colors.amber,
-                        Colors.tealAccent,
-                        Colors.black,
-                      ]
-                    )
-                  ),
-                )
-              ),
-              TextButton(
-                onPressed: () {},
-                child: const Text('Gradiant'),
-                style: TextButton.styleFrom(
-                  padding: const EdgeInsets.all(15),
-                  primary: Colors.white,
-                  textStyle: const TextStyle(fontSize: 20)
-                ),
-              )
-            ],
-          ),
-        ) 
-      ),
+      body: Center()
+      
     );
   }
 }
@@ -77,3 +47,37 @@ class _timer_pageState extends State<timer_page> {
       //     ),
       //   ),
       // ),
+
+
+      // Center(
+      //   child:ClipRRect(
+      //     borderRadius: BorderRadius.circular(5),
+      //     child: Stack(
+      //       children: [
+      //         Positioned.fill(
+      //           child: Container(
+      //             decoration: const BoxDecoration(
+      //               gradient: LinearGradient(
+      //                 colors: [
+      //                   Colors.black,
+      //                   Colors.amber,
+      //                   Colors.tealAccent,
+      //                   Colors.black,
+      //                 ]
+      //               )
+      //             ),
+      //           )
+      //         ),
+      //         TextButton(
+      //           onPressed: () {},
+      //           child: const Text('Gradiant'),
+      //           style: TextButton.styleFrom(
+      //             padding: const EdgeInsets.all(15),
+      //             primary: Colors.white,
+      //             textStyle: const TextStyle(fontSize: 20)
+      //           ),
+      //         )
+      //       ],
+      //     ),
+      //   ) 
+      // )

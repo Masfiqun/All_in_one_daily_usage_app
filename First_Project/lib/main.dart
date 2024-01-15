@@ -156,6 +156,8 @@ class _HomeActivityState extends State<HomeActivity> {
       
       drawer: Drawer(
         backgroundColor: Colors.black,
+        elevation: 50,
+        shadowColor: Colors.tealAccent,
         child: ListView(
           children: [
             DrawerHeader(
@@ -195,6 +197,8 @@ class _HomeActivityState extends State<HomeActivity> {
 
       endDrawer: Drawer(
         backgroundColor: Colors.black,
+        shadowColor: Colors.amberAccent,
+        elevation: 50,
         // foregroundColor: Colors.tealAccent,
         child: ListView(
           children: const [
