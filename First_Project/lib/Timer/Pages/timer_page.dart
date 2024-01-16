@@ -25,7 +25,7 @@ class _timer_pageState extends State<timer_page> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.deepPurple[300],
       body: Center()
       
     );
