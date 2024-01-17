@@ -175,19 +175,23 @@ class _HomeActivityState extends State<HomeActivity> {
               ),
             ),
             ListTile(
+              onTap: (){},
               leading: Icon(Icons.person),
               title: Text('Profile', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
+              onTap: (){},
               leading: Icon(Icons.safety_check),
               title: Text('BMI Counter', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
+              onTap: (){},
               leading: Icon(Icons.add_task),
               title:
                   Text('Step Counter', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
+              onTap: (){},
               leading: Icon(Icons.settings),
               title: Text('Settings', style: TextStyle(color: Colors.white)),
             ),
