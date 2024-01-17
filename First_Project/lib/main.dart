@@ -2,6 +2,7 @@
 
 import 'package:first_project/Alarm/alarm.dart';
 import 'package:first_project/Clock/clock.dart';
+import 'package:first_project/EndDrawer_To_Do_List/to_do.dart';
 import 'package:first_project/Stop_Watch/stop_watch.dart';
 import 'package:first_project/Timer/timer.dart';
 import 'package:flutter/material.dart';
@@ -191,6 +192,11 @@ class _HomeActivityState extends State<HomeActivity> {
                   Text('Step Counter', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
+              onTap: () {ToDoAp();},
+              leading: Icon(Icons.checklist),
+              title: Text('To-Do List', style: TextStyle(color: Colors.white),),
+            ),
+            ListTile(
               onTap: (){},
               leading: Icon(Icons.settings),
               title: Text('Settings', style: TextStyle(color: Colors.white)),
@@ -205,14 +211,9 @@ class _HomeActivityState extends State<HomeActivity> {
         elevation: 50,
         // foregroundColor: Colors.tealAccent,
         child: ListView(
-          children: const [
-            DrawerHeader(
-              child: Text(
-                "To-do List",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
+          children: [
+            Text('To-Do List', style: TextStyle(fontSize: 40.0,color: Colors.amberAccent),)
+          ]
         ),
       ),
     );
