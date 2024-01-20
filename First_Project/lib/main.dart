@@ -212,7 +212,7 @@ class _HomeActivityState extends State<HomeActivity> {
         // foregroundColor: Colors.tealAccent,
         child: ListView(
           children: [
-            Text('To-Do List', style: TextStyle(fontSize: 40.0,color: Colors.amberAccent),)
+            Text('To-Do List', style: TextStyle(fontSize: 40.0,color: Colors.deepOrangeAccent),)
           ]
         ),
       ),
