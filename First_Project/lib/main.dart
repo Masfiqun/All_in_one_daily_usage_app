@@ -207,7 +207,7 @@ class _HomeActivityState extends State<HomeActivity> {
 
       endDrawer: Drawer(
         backgroundColor: Colors.black,
-        shadowColor: Colors.amberAccent,
+        shadowColor: Colors.blueGrey,
         elevation: 50,
         // foregroundColor: Colors.tealAccent,
         child: ListView(
